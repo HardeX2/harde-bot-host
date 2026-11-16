@@ -1,0 +1,2 @@
+create table if not exists public.bots (id uuid primary key default gen_random_uuid(), name text not null, runtime text not null default 'node', status text not null default 'stopped', created_at timestamptz not null default now());
+alter table public.bots enable row level security;
